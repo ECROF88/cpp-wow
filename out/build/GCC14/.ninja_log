@@ -1,0 +1,6 @@
+# ninja log v6
+11	2933	7415264751723223	CMakeFiles/hello_cmake.dir/GraphAdjlist.cpp.obj	9b9d34d9fc0b4e23
+1806	1909	7421196860218236	hello_cmake.exe	80e0280de500b7fb
+12	1806	7421196842271910	CMakeFiles/hello_cmake.dir/main6.cpp.obj	374a8444610e1cd4
+3	3591	7415293065101230	CMakeFiles/hello_cmake.dir/mian3.cpp.obj	1d40f92f1600fe4f
+6	1468	7415436696067530	CMakeFiles/hello_cmake.dir/buildtreebypreorderandinorder.cpp.obj	701730aa3ec5d8fd

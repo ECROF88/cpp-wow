@@ -1,0 +1,7 @@
+# ninja log v6
+5	883	7414322417820850	build.ninja	798f8fd28ba2d04f
+16	2959	7414321509570982	CMakeFiles/hello_cmake.dir/GraphAdjlist.cpp.obj	95970ab761f18c51
+2972	3091	7414321539122963	hello_cmake.exe	7a8ee0e81f9bd75a
+12	247	7414322417820850	build.ninja	798f8fd28ba2d04f
+16	2918	7414322418360884	CMakeFiles/hello_cmake.dir/GraphAdjlist.cpp.obj	95970ab761f18c51
+2918	3055	7414322447389910	hello_cmake.exe	7a8ee0e81f9bd75a
