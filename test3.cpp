@@ -1,43 +1,30 @@
 #include <iostream>
-#include <memory>
 
-// 定义 Logger 接口
-class Logger
+#include "mycommon.h"
+
+using namespace std;
+
+class Solution
 {
 public:
-  virtual ~Logger() = default;
-  virtual void log(const std::string& message) = 0;
-};
-
-// 实现 ConsoleLogger 类
-class ConsoleLogger : public Logger
-{
-public:
-  void log(const std::string& message) override
+  int lengthOfLongestSubstring(string s)
   {
-    std::cout << message << std::endl;
+    int n = s.size();
+    // vevtor数组中存放的是每个字符在字符串s中出现的下标
+    vector<int> pos(128, -1);
+    int left = 0;
+    int len = 0;
+    for (int right = 0; right < n; right++) {
+      left = max(left, pos[s[right]] + 1);
+      len = max(len, right - left + 1);
+      pos[s[right]] = right;
+    }
+    return len;
   }
 };
 
-// 服务类依赖于 Logger 接口
-class UserService
-{
-private:
-  std::shared_ptr<Logger> logger;
-
-public:
-  UserService(std::shared_ptr<Logger> logger) : logger(logger) {}
-
-  void performTask() { logger->log("Performing a task"); }
-};
-
-// 使用依赖注入创建 UserService 实例
 int main()
 {
-  auto logger = std::make_shared<ConsoleLogger>();
-  UserService userService(std::move(logger));
-
-  userService.performTask();  // 控制台输出：Performing a task
-
-  return 0;
+  Solution s;
+  std::cout << s.lengthOfLongestSubstring("bbba");
 }
